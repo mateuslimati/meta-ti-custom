@@ -1,0 +1,46 @@
+From 9812651fd690e081f1bfc0cce6add99fcaa99818 Mon Sep 17 00:00:00 2001
+From: Mateus Alves <mateuslima.ti@gmail.com>
+Date: Sat, 25 Nov 2023 23:29:38 -0300
+Subject: [PATCH] my linux modifications
+
+---
+ arch/arm/boot/dts/am335x-bone-common.dtsi | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/arch/arm/boot/dts/am335x-bone-common.dtsi b/arch/arm/boot/dts/am335x-bone-common.dtsi
+index 064f0ac41eae..28441bedaa7e 100644
+--- a/arch/arm/boot/dts/am335x-bone-common.dtsi
++++ b/arch/arm/boot/dts/am335x-bone-common.dtsi
+@@ -28,28 +28,28 @@ leds {
+ 		led2 {
+ 			label = "beaglebone:green:usr0";
+ 			gpios = <&gpio1 21 GPIO_ACTIVE_HIGH>;
+-			linux,default-trigger = "heartbeat";
++			linux,default-trigger = "timer";
+ 			default-state = "off";
+ 		};
+ 
+ 		led3 {
+ 			label = "beaglebone:green:usr1";
+ 			gpios = <&gpio1 22 GPIO_ACTIVE_HIGH>;
+-			linux,default-trigger = "mmc0";
++			linux,default-trigger = "none";
+ 			default-state = "off";
+ 		};
+ 
+ 		led4 {
+ 			label = "beaglebone:green:usr2";
+ 			gpios = <&gpio1 23 GPIO_ACTIVE_HIGH>;
+-			linux,default-trigger = "cpu0";
++			linux,default-trigger = "none";
+ 			default-state = "off";
+ 		};
+ 
+ 		led5 {
+ 			label = "beaglebone:green:usr3";
+ 			gpios = <&gpio1 24 GPIO_ACTIVE_HIGH>;
+-			linux,default-trigger = "mmc1";
++			linux,default-trigger = "none";
+ 			default-state = "off";
+ 		};
+ 	};

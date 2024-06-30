@@ -5,23 +5,16 @@ Please see the corresponding sections below for details.
 Dependencies
 ============
 
-  URI: <first dependency>
-  branch: <branch name>
-
-  URI: <second dependency>
-  branch: <branch name>
-
-  .
-  .
-  .
+  URI: git://git.yoctoproject.org/meta-ti
+  branch: kirsktone
 
 Patches
 =======
 
-Please submit any patches against the meta-ti-custom layer to the xxxx mailing list (xxxx@zzzz.org)
+Please submit any patches against the meta-ti-custom layer to mateuslima.ti@gmail.com
 and cc: the maintainer:
 
-Maintainer: XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
+Maintainer: Mateus Lima Alves <mateuslima.ti@gmail.com>
 
 Table of Contents
 =================
@@ -38,4 +31,4 @@ Run 'bitbake-layers add-layer meta-ti-custom'
 II. Misc
 ========
 
---- replace with specific information about the meta-ti-custom layer ---
+OpenEmbedded/Yocto layer that customize the beaglebone black.

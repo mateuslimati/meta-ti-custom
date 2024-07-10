@@ -1,0 +1,33 @@
+From 98e0581ded9823eda6161d1e32efdbbc1571900e Mon Sep 17 00:00:00 2001
+From: Mateus Alves <mateuslima.ti@gmail.com>
+Date: Wed, 10 Jul 2024 16:05:48 -0300
+Subject: [PATCH] fixed vring interrupts.
+
+---
+ arch/arm/boot/dts/am33xx-l4.dtsi | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am33xx-l4.dtsi b/arch/arm/boot/dts/am33xx-l4.dtsi
+index 4b5cc56929f1..f9b0791b7095 100644
+--- a/arch/arm/boot/dts/am33xx-l4.dtsi
++++ b/arch/arm/boot/dts/am33xx-l4.dtsi
+@@ -915,6 +915,9 @@ pru0: pru@34000 {
+ 					      <0x22400 0x100>;
+ 					reg-names = "iram", "control", "debug";
+ 					firmware-name = "am335x-pru0-fw";
++					interrupt-parent = <&pruss_intc>;
++					interrupts = <16 2 2>;
++					interrupt-names = "vring";
+ 				};
+ 
+ 				pru1: pru@38000 {
+@@ -924,6 +927,9 @@ pru1: pru@38000 {
+ 					      <0x24400 0x100>;
+ 					reg-names = "iram", "control", "debug";
+ 					firmware-name = "am335x-pru1-fw";
++					interrupt-parent = <&pruss_intc>;
++					interrupts = <18 3 3>;
++					interrupt-names = "vring";
+ 				};
+ 
+ 				pruss_mdio: mdio@32400 {
